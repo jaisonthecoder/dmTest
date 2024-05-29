@@ -1,29 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
 
-
-
-
 :root {
-  --fontFamily: 'Dubai', sans-serif;
-  --headingFontFamily: 'dbfont-bold', sans-serif;
+  --fontFamily: "Dubai", sans-serif;
+  --headingFontFamily: "dbfont-bold", sans-serif;
   --secondaryColor: #717477;
   --whiteColor: #ffffff;
   --blackColor: #0f2137;
-  --transition: .5s;
-  --dm_header_height:100px;
-  --caption-color:#3B3F54;
+  --transition: 0.5s;
+  --dm_header_height: 100px;
+  --caption-color: #3b3f54;
 }
 body {
   margin: 0;
   padding: 0;
   color: var(--blackColor);
   font: {
-      size: var(--fontSize);
-      family: var(--fontFamily);
-  };
+    size: var(--fontSize);
+    family: var(--fontFamily);
+  }
 
-  img{
+  img {
     max-width: 100%;
+  }
+
+  * {
+    transition: all ease-in 0.5s;
+    -webkit-font-smoothing: antialiased;
+
   }
 
   ul {
@@ -31,35 +34,38 @@ body {
     margin: 0;
     padding: 0;
     align-items: flex-end;
-}
+  }
 }
 
-.caption-block{
+.caption-block {
   text-align: center;
   padding: 2rem;
   .main-captions {
     color: var(--caption-color);
-     text-align: center;
+    text-align: center;
     font-size: 2rem;
     font-weight: 500;
     margin: 0;
   }
-  p{
+  p {
     font-size: 1.2rem;
   }
-
 }
 
-
-.page-sections{
-  width:100%;
-  &:nth-child(even){
-  background-color: #f9fafc;
+.page-sections {
+  width: 100%;
+  &:nth-child(even) {
+    background-color: #f9fafc;
+  }
+  &:nth-child(odd) {
+    background-color: #fff;
+  }
 }
-&:nth-child(odd){
-  background-color: #FFF;
+.btn-primary{
+  background:var( --caption-color) !important ;
+  border-color: var( --caption-color) !important ;
 }
 
+.pay-btn{
+  min-width: 150px;
 }
-
-

@@ -6,7 +6,7 @@
 
     <ul class="navbar-nav  main-nav col">
       @for (item of navigationList; track item) {
-      <li class="nav-item"><a href="#" [routerLink]="item.routerLink" routerLinkActive="active" class="nav-link">{{
+      <li   aria-label="item?.label | transloco" class="nav-item"><a href="#" [routerLink]="item.routerLink" routerLinkActive="active" class="nav-link">{{
           item?.label | transloco }}</a>
       </li>
       }
@@ -46,7 +46,7 @@
     </div>
     <ul class="side_nav__list col">
       @for (item of navigationList; track item) {
-      <li class="nav-item"><a href="#" [routerLink]="item.routerLink" class="nav-link">{{ item?.label | transloco }}</a>
+      <li aria-label="item?.label | transloco" class="nav-item"><a href="#" [routerLink]="item.routerLink" class="nav-link">{{ item?.label | transloco }}</a>
       </li>
       }
       @empty {

@@ -5,8 +5,8 @@
   @for (slide of slideImages; track slide) {
 
   <ng-template ngbSlide>
-    <div class="picsum-img-wrapper">
-      <img [src]="slide.url" alt="Random second slide" />
+    <div role="img" aria-label="Description of the overall image" class="picsum-img-wrapper">
+      <img      [src]="slide.url" alt="Random second slide" />
     </div>
     <div class="carousel-caption">
       <div class="mb-5">
@@ -17,10 +17,10 @@
 
 
       <div class="search-field-wrap">
-        <button class="btn"> <fa-icon [icon]="faMicrophone"></fa-icon>
+        <button class="btn"  aria-pressed=true> <fa-icon [icon]="faMicrophone"></fa-icon>
         </button>
         <input type="search" placeholder="{{'Search Services, News, Information, Circulars...'}}" />
-        <button class="btn searchBtnWrap">
+        <button  aria-pressed=true class="btn searchBtnWrap">
           <fa-icon [icon]="faSearch"></fa-icon>
         </button>
 
