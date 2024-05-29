@@ -1,0 +1,11 @@
+.card-group{
+  gap:50px;
+  > .card{
+    border:none !important;
+    border-radius: 10px !important;
+   .card-img-top{
+    padding: 1rem;
+   }
+
+  }
+}

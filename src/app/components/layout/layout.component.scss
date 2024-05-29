@@ -1,0 +1,67 @@
+.dm_header {
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: 100%;
+  height:var(--dm_header_height);
+	position: fixed !important;
+	background: transparent !important;
+  padding: {
+        top: 30px;
+        bottom: 30px;
+    };
+    &.sticky {
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        position: fixed;
+        background-color: #fff !important;
+        box-shadow:0 0 10px rgba(0, 0, 0, 0.36);
+        animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+        padding: {
+            top: 20px;
+            bottom: 20px;
+        };
+
+        .dm_header__logo{
+          filter:none !important;
+        }
+    }
+    &__logo{
+      display: block;
+      width:200px;
+      filter:brightness(0) invert(1);
+    }
+    &__govLogo{display: block;
+      width:160px;
+    }
+
+
+}
+
+.dm_sub_header {
+	top: var(--dm_header_height);
+	left: 0;
+	z-index: 2;
+	width: 100%;
+	position: absolute !important;
+	background: transparent !important;
+    padding: {
+        top: 30px;
+        bottom: 30px;
+    };
+
+    @media screen and (max-width: 1100px) {top:0px;}
+}
+
+@media screen and (max-width: 1100px) {
+  .dm_sub_header{top:0px;}
+  .dm_header{display: none;}
+}
+
+// @media (min-width: 992px) and (max-width: 1100px) {
+//  .dm_header{  display: none; }
+//  .dm_sub_header{  top:0px; }
+//  .navbar-nav{display: none;}
+// }

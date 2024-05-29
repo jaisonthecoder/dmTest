@@ -1,0 +1,155 @@
+
+:host{
+  display: block;
+  width:100%;
+}
+.nav_header_logo_responsive
+{
+  display: none;
+  max-width: 150px;
+}
+@media screen and (max-width: 768px) {
+    .nav_header_logo_responsive{
+      display: block;
+      width: 180px;
+      filter:brightness(1)
+  }
+}
+
+.main-nav{
+  font-weight: bold;
+  margin-top:-4px;
+  gap:16px;
+  *{
+    color:var(--whiteColor)
+  }
+  a{
+  &.active{
+    position: relative;
+
+    &::after{
+      position: absolute;
+      content: "";
+      bottom:0px;
+      height:5px;
+      background-color: #fff;
+      width: 100%;
+      left: 0;
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+    }
+  }
+  }
+
+
+}
+.sub-nav
+{
+  gap:10px;
+  li{
+    background: rgba(#ffffff, 0.2);
+    box-shadow: 0px 0px 1px #cdcdcd;
+    color:var(--whiteColor);
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    width: unset;
+    padding: 0 16px;
+    border-radius: 20px;
+    *{
+      color:var(--whiteColor);
+    }
+  }
+}
+
+
+.faBarIcon{
+  color:#fff;
+  font-size: 20px;
+}
+
+
+
+html{
+  &dir[rtl]{
+    .side_nav{
+      left:auto !important;
+      right:0
+    }
+  }
+}
+
+.side_nav{
+  position: fixed;
+  top:0;
+  left:0;
+  right:auto;
+  width: 300px;
+  background-color: #fff;
+  height:100%;
+  box-shadow: 0px 0px 10px #222;
+
+  &__header{
+    padding: 1rem;
+    position: cursor;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__list{
+      display: flex;
+      flex-direction: column;
+      li{
+        padding: 1rem;
+        text-align: left;
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+      }
+  }
+}
+
+
+.search-field-nav{
+  display: flex;
+  flex-direction: row;
+  background-color:none ;border:none;
+  border-radius: 5px;
+  .btn{
+    color:var(--caption-color);
+  }
+  input{
+    height:26px;
+    width:100px;
+    border:none !important;
+    background: none !important;
+    outline: none !important;
+    padding: 5px 10px;
+    &:focus{
+      width:150px
+    }
+    &::placeholder{color: #fff !important;}
+
+
+
+  }
+}
+
+
+
+@media screen and (min-width: 1100px) {
+
+}
+
+@media screen and (max-width: 1100px) {
+  .nav_header_logo_responsive{
+    display: block;
+    width: 180px;
+    filter:brightness(1)
+}
+
+.main-nav{display: none;}
+.sub-nav{
+  flex-direction: row !important;
+}
+.hide-sm{display: none !important;}
+}

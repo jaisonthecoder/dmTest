@@ -1,0 +1,59 @@
+<nav class="navbar navbar-expand-lg d-block ">
+  <div class=" d-flex justify-content-between">
+    <button class="btn faBarIcon" type="button" (click)="toggleClass()">
+      <fa-icon [icon]="faBars"></fa-icon>
+    </button>
+
+    <ul class="navbar-nav  main-nav col">
+      @for (item of navigationList; track item) {
+      <li class="nav-item"><a href="#" [routerLink]="item.routerLink" routerLinkActive="active" class="nav-link">{{
+          item?.label | transloco }}</a>
+      </li>
+      }
+      @empty {
+      <li>No items found</li>
+      }
+    </ul>
+
+    <a class="nav_header_logo_responsive  col" aria-label="Dubai Municipality Logo" routerLink="/">
+      <img src="assets/img/dmLogo.png.webp" alt="Dubai Municipality logo">
+    </a>
+
+    <ul class="navbar-nav for-responsive sub-nav col-auto ">
+      <li class="nav-item hide-sm searchbar-item"><span class="nav-link">
+          <div class="search-field-nav">
+            <button class="btn searchBtnWrap p-0">
+              <fa-icon [icon]="faSearch"></fa-icon>
+            </button>
+            <input type="search" placeholder="{{'Search' | transloco}}" />
+          </div>
+        </span></li>
+      <li class="nav-item hide-sm"><span class="nav-link" (click)="changeLang(lang);">{{'English' | transloco}}</span>
+      </li>
+      <li class="nav-item hide-sm"><span class="nav-link">{{"Settings" | transloco}}</span>
+      </li>
+
+      <li class="nav-item"><span class="nav-link">{{"Login" | transloco}}</span></li>
+    </ul>
+
+  </div>
+
+  @if(sideBar){
+  <div class="side_nav">
+    <div class="side_nav__header">
+      <strong>Main Menu</strong>
+      <div (click)="toggleClass()"><fa-icon [icon]="faClose"></fa-icon></div>
+    </div>
+    <ul class="side_nav__list col">
+      @for (item of navigationList; track item) {
+      <li class="nav-item"><a href="#" [routerLink]="item.routerLink" class="nav-link">{{ item?.label | transloco }}</a>
+      </li>
+      }
+      @empty {
+      <li>No items found</li>
+      }
+    </ul>
+  </div>
+  }
+
+</nav>

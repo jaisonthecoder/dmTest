@@ -1,0 +1,21 @@
+<header class="dm_header"  [class.active]="classApplied"  [ngClass]="{'sticky': isSticky}">
+    <div class="container d-flex justify-content-between">
+      <a class="dm_header__govLogo " aria-label="Dubai Government Logo" routerLink="/">
+        <img src="assets/img/dmgovtLogo-new.svg" alt="Dubai government logo">
+    </a>
+      <a class="dm_header__logo " aria-label="Dubai Municipality Logo" routerLink="/">
+          <img src="assets/img/dmLogo.png.webp" alt="Dubai Municipality logo">
+      </a>
+  </div>
+</header>
+<header class="dm_sub_header"  [ngClass]="{'hide': isSticky}">
+  <div class="container d-flex justify-content-between">
+    <app-navigation [navigationList]="navigationList"></app-navigation>
+  </div>
+
+</header>
+
+<main >
+  <router-outlet />
+</main>
+<footer><app-common-footer></app-common-footer></footer>

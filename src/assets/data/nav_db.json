@@ -1,0 +1,47 @@
+[{ "id":"1",
+  "label":"Home",
+  "routerLink":"/home",
+  "description":"Home Page",
+  "show":true,
+  "iconUrl":""
+},
+{ "id":"2",
+  "label":"About Us",
+  "routerLink":"/about",
+  "description":"About Page",
+  "show":true,
+  "iconUrl":""
+},
+{ "id":"3",
+  "label":"Services",
+  "routerLink":"/services",
+  "description":"Service Page",
+  "show":true,
+  "iconUrl":""
+},
+{
+  "id":"4",
+  "label":"Easy Payment",
+  "routerLink":"/payment",
+  "description":"Easy Payment Page",
+  "show":true,
+  "iconUrl":""
+},
+{ "id":"5",
+  "label":"Open Data",
+  "routerLink":"/data",
+  "description":"Open Data Page",
+  "show":true,
+  "iconUrl":""
+},
+
+{ "id":"6",
+  "label":"Contact Us",
+  "routerLink":"/contact",
+  "description":"Contact Page",
+  "show":true,
+  "iconUrl":""
+}
+
+]
+
